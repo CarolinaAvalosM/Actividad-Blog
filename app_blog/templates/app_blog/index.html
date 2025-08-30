@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Entradas del blog</h1>
+    
+    <!-- Lista de publicaciones -->
+    <ul>
+        <!-- Recorre cada publicación en el contexto -->
+        {% for publicacion in publicaciones %}
+            <li>
+                <!-- Muestra el título y la fecha de creación -->
+                <strong>{{ publicacion.titulo }}</strong> 
+                ({{ publicacion.fecha_de_creacion|date:"d/m/Y" }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
